@@ -1,5 +1,6 @@
 import React from "react";
-import { Animated, Text, View, PanResponder, Image } from "react-native";
+import { Animated, Text, View, PanResponder, Image, Button } from "react-native";
+import { withNavigation } from "react-navigation";
 import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
@@ -11,7 +12,7 @@ const CARD_INITIAL_Y_POSITION = hp("80%");
 const CARD_INITIAL_X_POSITION = wp("5%");
 const TRESHHOLD_TO_TOP = hp("75%");
 const TRESHHOLD_TO_BOTTOM = hp("70%");
-const CARD_OPEN_POSITION = hp("45%");
+const CARD_OPEN_POSITION = hp("50%");
 const MAX_DRAG_ZONE_WHEN_OPEN = hp("65%")
 const ICON_URL = "https://openweathermap.org/img/w/";
 
@@ -22,6 +23,16 @@ class WeatherCard extends React.Component {
   };
 
   componentDidMount() {
+    this.onFocusListener = this.props.navigation.addListener(
+      "willFocus",
+      payload => {
+        this.resetPosition(() =>
+          this.setState({
+            isOpen: false
+          })
+        )
+      }
+    );
     this.position = new Animated.ValueXY();
     this.position.setValue({
       x: CARD_INITIAL_X_POSITION,
@@ -140,6 +151,34 @@ class WeatherCard extends React.Component {
     );
   };
 
+  goToDetail = () => {
+    this.props.navigation.push("Detail", {city: this.props.currentWeather.name})
+  };
+
+  renderMoreDetail() {
+    return (
+      <View>
+        <View
+          style={{
+            alignItems: "center",
+            marginTop: 40
+          }}
+        >
+          <Text>Humidity : {this.props.currentWeather.main.humidity} %</Text>
+          <Text>Pressure : {this.props.currentWeather.main.pressure} hpa</Text>
+          <Text>Max temperature : {kelvinToCelcius(this.props.currentWeather.main.temp_max)} °C</Text>
+          <Text>Min temperature : {kelvinToCelcius(this.props.currentWeather.main.temp_min)} °C</Text>
+          <Text>Wind speed : {this.props.currentWeather.wind.speed} km/h</Text>
+        </View>
+        <Button
+          color="blue"
+          onPress={this.goToDetail}
+          title="See 5 days forecast"
+        />
+      </View>
+    );
+  };
+
   render() {
     return this.state.panResponder ?
       <Animated.View
@@ -147,9 +186,10 @@ class WeatherCard extends React.Component {
        {...this.state.panResponder.panHandlers}
       >
         {this.renderHeader()}
+        {this.renderMoreDetail()}
       </Animated.View> :
       <View />
   }
 }
 
-export default WeatherCard;
+export default withNavigation(WeatherCard);

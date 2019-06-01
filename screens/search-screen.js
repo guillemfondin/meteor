@@ -7,7 +7,7 @@ import {
   heightPercentageToDP as hp,
 } from 'react-native-responsive-screen';
 import { connect } from "react-redux";
-import { getCurrentWeatherByCity } from "../actions/index";
+import { getCurrentWeatherByCity } from "../actions";
 import WeatherCard from '../components/weather-cards';
 
 const DEFAULT_COORD = {
@@ -25,7 +25,6 @@ class SearchScreen extends React.Component {
 
   submitSearch = () => {
     this.props.getCurrentWeatherByCity(this.state.search);
-    console.log(this.state.search);
   };
 
   render() {
