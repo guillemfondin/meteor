@@ -3,9 +3,11 @@ import { connect } from "react-redux";
 import { View, AsyncStorage } from "react-native";
 import { withNavigation } from "react-navigation";
 import { facebookLogin } from "../actions";
+import { subscribeToPushNotifications } from "../services/notifications";
 
 class IndexScreen extends React.Component {
   componentDidMount() {
+    subscribeToPushNotifications();
     AsyncStorage.getItem("fbToken").then((token => {
       if (token) {
         this.goToSearch();

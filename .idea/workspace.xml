@@ -2,14 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2801ecbe-70c4-4d79-b4ef-86ae292a0075" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/reducers/authentification.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/screens/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/notifications.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/actions/action-types.js" beforeDir="false" afterPath="$PROJECT_DIR$/actions/action-types.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/actions/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/actions/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/constant.js" beforeDir="false" afterPath="$PROJECT_DIR$/constant.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reducers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/reducers/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screens/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/screens/index.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -66,13 +61,25 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/screens/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="294">
-              <caret line="14" column="8" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
+            <state relative-caret-position="136">
+              <caret line="9" column="35" selection-start-line="9" selection-start-column="35" selection-end-line="9" selection-end-column="35" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/services/notifications.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="63">
+              <caret line="3" column="87" selection-start-line="3" selection-start-column="87" selection-end-line="3" selection-end-column="87" />
+              <folding>
+                <element signature="e#0#50#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -128,6 +135,7 @@
         <option value="$PROJECT_DIR$/screens/search-screen.js" />
         <option value="$PROJECT_DIR$/actions/index.js" />
         <option value="$PROJECT_DIR$/screens/index.js" />
+        <option value="$PROJECT_DIR$/services/notifications.js" />
       </list>
     </option>
   </component>
@@ -151,11 +159,6 @@
             <path>
               <item name="meteo-map" type="b2602c69:ProjectViewProjectNode" />
               <item name="meteo-map" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="meteo-map" type="b2602c69:ProjectViewProjectNode" />
-              <item name="meteo-map" type="462c0819:PsiDirectoryNode" />
-              <item name=".expo" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="meteo-map" type="b2602c69:ProjectViewProjectNode" />
@@ -226,12 +229,12 @@
       <workItem from="1559386612581" duration="1189000" />
       <workItem from="1559387936971" duration="286000" />
       <workItem from="1559389346752" duration="602000" />
-      <workItem from="1559390237795" duration="10546000" />
+      <workItem from="1559390237795" duration="13625000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29736000" />
+    <option name="totallyTimeSpent" value="32815000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="920" y="23" width="1000" height="980" extended-state="0" />
@@ -239,10 +242,10 @@
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
       <window_info id="npm" order="1" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="2" visible="true" weight="0.27348644" />
+      <window_info content_ui="combo" id="Project" order="2" visible="true" weight="0.27348644" />
       <window_info id="Structure" order="3" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="1" visible="true" weight="0.32912844" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="1" visible="true" weight="0.32912844" />
       <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="4" />
@@ -386,10 +389,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/screens/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="14" column="8" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
+        <state relative-caret-position="136">
+          <caret line="9" column="35" selection-start-line="9" selection-start-column="35" selection-end-line="9" selection-end-column="35" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/services/notifications.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="63">
+          <caret line="3" column="87" selection-start-line="3" selection-start-column="87" selection-end-line="3" selection-end-column="87" />
+          <folding>
+            <element signature="e#0#50#0" expanded="true" />
           </folding>
         </state>
       </provider>
